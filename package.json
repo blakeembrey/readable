@@ -6,7 +6,8 @@
   "description": "Make any article readable again",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
   },
   "repository": "",
   "keywords": [
@@ -24,9 +25,11 @@
     "handlebars": "~1.0.10"
   },
   "devDependencies": {
-    "grunt-release": "~0.3.3",
     "grunt-contrib-watch": "~0.3.1",
     "grunt-contrib-stylus": "~0.5.0",
     "grunt": "~0.4.1"
+  },
+  "engines": {
+    "node": "0.8.x"
   }
 }
