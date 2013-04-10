@@ -60,15 +60,19 @@ var app = module.exports = connect()
 
       var $ = cheerio.load(article.html);
 
-      $('a').each(function () {
-        var $this = $(this);
-        $this.attr('href', url.resolve(articleUrl.href, $this.attr('href')));
-      });
+      var resolveLinks = function (element, attr) {
+        $(element).each(function () {
+          var $this = $(this),
+              href  = $this.attr(attr);
 
-      $('img').each(function () {
-        var $this = $(this);
-        $this.attr('src', url.resolve(articleUrl.href, $this.attr('src')));
-      });
+          if (!href) { return; }
+
+          $this.attr(attr, url.resolve(articleUrl.href, href));
+        });
+      };
+
+      resolveLinks('a',   'href');
+      resolveLinks('img', 'src');
 
       var title = unescapeHtml(article.title);
 

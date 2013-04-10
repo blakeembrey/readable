@@ -1,6 +1,6 @@
 {
   "name": "readable",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "subdomain": "read",
   "private": true,
   "description": "Make any article readable again",
