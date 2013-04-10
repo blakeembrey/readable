@@ -1,0 +1,114 @@
+@import "functions"
+@import "../../components/stylus-type-utils"
+
+.{buttons-class-name}
+	display: inline-block
+	position: relative
+	padding: 0.25em 0.8em
+	border: 1px solid rgba(0, 0, 0, 0.3)
+	border-radius: buttons-border-radius
+	text-align: center
+	text-decoration: none
+	text-rendering: optimizeLegibility
+	-webkit-font-smoothing: antialiased
+	cursor: pointer
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15)
+	user-select: none
+	vertical-align: middle
+	// Using some crap height calculations here to get consistent cross browser styles
+	box-sizing: border-box
+	line-height: buttons-line-height
+	height: em(@line-height) + em(@padding[0] * 2) + em(@border[0] * 2)
+	buttons-generate(buttons-background, buttons-background-highlight, #454545, 0 1px 0 #eee)
+	// Remove text-decoration for links
+	&:hover,
+	&:active
+		text-decoration: none
+	// Subtle active inset box-shadow
+	&:active,
+	&.active
+		box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.15)
+	// Remove outline and add inset 1px white focus
+	&:focus
+		outline: 0
+		border-color: black
+		box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.5)
+	// Disabled styles
+	&.disabled,
+	&[disabled],
+	fieldset[disabled] &
+		cursor: default
+		opacity: 0.6
+		box-shadow: @box-shadow // For browsers that don't support `pointer-events`
+		// pointer-events: none
+	// Remove gradients for flatter buttons
+	&.{buttons-class-name}-quiet,
+	&.{buttons-class-name}-quiet:hover,
+	&.{buttons-class-name}-quiet.disabled,
+	&.{buttons-class-name}-quiet[disabled],
+	&.{buttons-class-name}-quiet.disabled:hover,
+	&.{buttons-class-name}-quiet[disabled]:hover,
+	&.{buttons-class-name}-quiet.disabled:active,
+	&.{buttons-class-name}-quiet[disabled]:active,
+	fieldset[disabled] &.{buttons-class-name}-quiet
+		background-image: none
+	// Add rounded button support
+	&.{buttons-class-name}-pill
+		border-radius: 9em
+
+// Cross-browser CSS support - thanks to normalize.css
+.{buttons-class-name}
+	margin: 0 // Address margins set differently in Firefox 4+, Safari 5, and Chrome
+	font-size: 100% // Correct font size not being inherited in all browsers
+	font-family: inherit // Correct font family not being inherited in all browsers
+	text-transform: none // Address inconsistent `text-transform` inheritance for `button`
+	// Remove inner padding and border in Firefox 4+
+	&::-moz-focus-inner
+		border: 0
+		padding: 0
+
+
+// Button Sizes
+// --------------------------------------------------
+
+.{buttons-class-name}-mini
+	font-size: 70%
+.{buttons-class-name}-small
+	font-size: 85%
+.{buttons-class-name}-large
+	font-size: 115%
+
+
+
+// Alternate buttons
+// --------------------------------------------------
+
+.{buttons-class-name}-primary
+	@extend .{buttons-class-name}
+	buttons-generate(buttons-primary-background, buttons-primary-background-highlight)
+.{buttons-class-name}-info
+	@extend .{buttons-class-name}
+	buttons-generate(buttons-info-background, buttons-info-background-highlight)
+.{buttons-class-name}-success
+	@extend .{buttons-class-name}
+	buttons-generate(buttons-success-background, buttons-success-background-highlight)
+.{buttons-class-name}-warning
+	@extend .{buttons-class-name}
+	buttons-generate(buttons-warning-background, buttons-warning-background-highlight)
+.{buttons-class-name}-danger
+	@extend .{buttons-class-name}
+	buttons-generate(buttons-danger-background, buttons-danger-background-highlight)
+.{buttons-class-name}-inverse
+	@extend .{buttons-class-name}
+	buttons-generate(buttons-inverse-background, buttons-inverse-background-highlight)
+
+
+
+// Block button
+// -------------------------
+
+.{buttons-class-name}-block
+	width: 100%
+	// Vertically space out any buttons after a block button
+	+ .{buttons-class-name}
+		margin-top: em(base-line-height)

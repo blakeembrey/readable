@@ -1,0 +1,292 @@
+html {
+  color: #666;
+  background: #fff;
+  font-size: 100%;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+}
+p {
+  margin: 0 0 0.75em;
+}
+.lead {
+  font-size: 150%;
+  font-weight: 100;
+  line-height: 1.5;
+  margin-bottom: 1em;
+}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+a {
+  color: #d90000;
+  text-decoration: none;
+}
+a:hover,
+a:focus {
+  color: #000;
+  text-decoration: underline;
+}
+small {
+  font-size: 75%;
+}
+strong,
+.text-bold {
+  font-weight: bold;
+}
+em,
+dfn,
+cite {
+  font-style: italic;
+}
+mark,
+.text-highlight {
+  color: #000;
+  background: #ff0;
+}
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
+.text-center {
+  text-align: center;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  color: #555;
+  margin: 0.75em 0;
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.2;
+}
+h1 small,
+h2 small,
+h3 small,
+h4 small,
+h5 small,
+h6 small,
+.h1 small,
+.h2 small,
+.h3 small,
+.h4 small,
+.h5 small,
+.h6 small {
+  color: #999;
+  font-weight: normal;
+  line-height: 1;
+}
+h1,
+.h1 {
+  font-size: 2.5em;
+  margin: 0.3em 0;
+}
+h2,
+.h2 {
+  font-size: 1.8em;
+  margin: 0.41666666666666663em 0;
+}
+h3,
+.h3 {
+  font-size: 1.5em;
+  margin: 0.5em 0;
+}
+h4,
+.h4 {
+  font-size: 1.25em;
+  margin: 0.6em 0;
+}
+h5,
+.h5 {
+  font-size: 1em;
+  margin: 0.75em 0;
+}
+h6,
+.h6 {
+  font-size: 0.875em;
+  margin: 0.8571428571428571em 0;
+}
+ul {
+  list-style: disc;
+}
+ol {
+  list-style: decimal;
+}
+ul,
+ol {
+  margin: 0 0 0.75em 1.8em;
+  padding: 0;
+}
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+  margin-bottom: 0;
+}
+li {
+  line-height: 1.5;
+}
+ul.list-unstyled,
+ol.list-unstyled,
+ul.list-inline,
+ol.list-inline {
+  margin-left: 0;
+  list-style: none;
+}
+ul ul.list-unstyled,
+ol ul.list-unstyled,
+ul ol.list-unstyled,
+ol ol.list-unstyled,
+ul.list-inline ul.list-inline,
+ol.list-inline ul.list-inline,
+ul.list-inline ol.list-inline,
+ol.list-inline ol.list-inline {
+  margin-left: 1.8em;
+}
+ul.list-inline > li,
+ol.list-inline > li {
+  display: inline-block;
+  padding: 0 0.35em;
+}
+dl {
+  margin-bottom: 1.5em;
+}
+dt,
+dd {
+  line-height: 1.5;
+}
+dt {
+  font-weight: bold;
+}
+dd {
+  margin-left: 0.75em;
+}
+.dl-horizontal:after,
+.dl-horizontal:before {
+  content: " ";
+  display: table;
+}
+.dl-horizontal:after {
+  clear: both;
+}
+.dl-horizontal dt {
+  overflow: ellipsis;
+}
+@media only screen and (min-width: 48em) {
+  .dl-horizontal dt {
+    width: 10.40625em;
+    float: left;
+    clear: left;
+    text-align: right;
+  }
+}
+@media only screen and (min-width: 48em) {
+  .dl-horizontal dd {
+    margin-left: 11.25em;
+  }
+}
+hr,
+.divider {
+  height: 0;
+  overflow: hidden;
+  margin: 1.5em 0;
+  border-top: solid #dfe2e2;
+  border-width: 1px 0;
+  border-bottom: solid #fff;
+}
+.divider {
+  margin: 0.675em 0.07em;
+}
+abbr {
+  cursor: help;
+  border-bottom: 1px dotted #999;
+}
+.initialism {
+  font-size: 90%;
+  text-transform: uppercase;
+}
+q,
+blockquote {
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
+blockquote {
+  position: relative;
+  margin: 0.75em 0 1.5em;
+  padding-top: 1em;
+  padding-left: 3em;
+}
+blockquote:before {
+  content: "\201C";
+  color: #ddd;
+  font-size: 8em;
+  line-height: 1;
+  font-weight: 200;
+  position: absolute;
+  top: -0.125em;
+  left: 0;
+}
+blockquote p {
+  font-size: 18.4px;
+  font-size: 1.15rem;
+  font-weight: 200;
+  line-height: 1.875;
+  margin-bottom: 0;
+}
+blockquote cite {
+  color: #999;
+  display: block;
+  line-height: 1.5;
+}
+blockquote cite:before {
+  content: "\2014 \00A0";
+}
+blockquote.pull-right {
+  padding-right: 3em;
+  padding-left: 0;
+}
+blockquote.pull-right:before {
+  content: "\201D";
+  left: auto;
+  right: 0;
+}
+blockquote.pull-right p,
+blockquote.pull-right cite {
+  text-align: right;
+}
+blockquote.pull-right cite:before {
+  content: "";
+}
+blockquote.pull-right cite:after {
+  content: "\00A0 \2014";
+}
+address {
+  display: block;
+  font-style: normal;
+  line-height: 1.5;
+  margin-bottom: 1.5em;
+}

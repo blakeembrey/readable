@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>{{#if title}}{{ title }} • {{/if}}Readable</title>
+    <meta name="description" content="Make the article readable again.">
+    <meta name="author" content="Blake Embrey">
+    {{#if noIndex}}<meta name="robots" content="noindex">{{/if}}
+
+    <meta name="viewport" content="width=device-width">
+
+    <link rel="stylesheet" href="/css/main.css">
+  </head>
+  <body{{#if className}} class="{{ className }}"{{/if}}>
+    {{{ body }}}
+  </body>
+</html>

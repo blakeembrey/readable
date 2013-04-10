@@ -1,0 +1,26 @@
+{
+  "name": "code-block",
+  "version": "0.0.3",
+  "description": "Simple CSS reset for code blocks",
+  "main": "lib/code-block.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "",
+  "keywords": [
+    "code",
+    "css",
+    "stylus"
+  ],
+  "author": "Blake Embrey",
+  "license": "MIT",
+  "readmeFilename": "Readme.md",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-stylus": "~0.5.0"
+  },
+  "peerDependencies": {
+    "stylus": "0.x"
+  },
+  "dependencies": {}
+}

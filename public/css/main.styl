@@ -1,0 +1,58 @@
+base-link-color = #f20
+
+@import "grid"
+@import "typography"
+@import "code-block"
+@import "form"
+@import "buttons"
+
+grid-generate(12)
+
+.grid-container
+  max-width: 40em
+
+.favicon
+  margin-right: 5px
+
+html,
+body
+  width: 100%
+  height: 100%
+
+// Error page
+.error
+  display: table
+  background-color: #f20
+
+.error-message
+  display: table-cell
+  width: 100%
+  height: 100%
+  text-align: center
+  vertical-align: middle
+  p,
+  h1,
+  h2
+    color: base-background
+  p
+    font-weight: bold
+  a
+    color: #111
+
+.article-home a
+  position: relative
+  &:after,
+  &:before
+    content: "\2022"
+    padding: 0 1em
+    color: base-text-color
+    font-size: 2em
+    position: absolute
+    top: -0.45em
+    left: -2em // Offset the padding
+  &:after
+    left: auto
+    right: -2em
+  &:hover:after,
+  &:hover:before
+    text-decoration: none

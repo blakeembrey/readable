@@ -1,0 +1,9 @@
+@import "lib/grid"
+
+grid-generate(12)
+
+@media (min-width: 40em)
+	grid-generate-columns(12, "tablet")
+
+@media (min-width: 64em)
+	grid-generate-columns(12, "desktop")

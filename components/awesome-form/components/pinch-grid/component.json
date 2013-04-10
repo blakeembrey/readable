@@ -1,0 +1,20 @@
+{
+  "name": "pinch-grid",
+  "main": [
+    "./grid.css"
+  ],
+  "version": "0.0.0",
+  "dependencies": {
+    "stylus-type-utils": "latest"
+  },
+  "gitHead": "6d92381a2adbdca56f128ebc0e70b9a684b367e8",
+  "readme": "# Pinch Grid\n\nPowerful fluid grid generator for Stylus and CSS. Using `inline-block` and `box-sizing` for pure awesomeness. It is built as a dropin replacement for most other grids, noteably Bootstrap, but it can be used for sizing almost any element - not just grids.\n\nCurrently generating the grid within a media query doesn't work. It's just waiting for [this pull request](https://github.com/LearnBoost/stylus/pull/964) to be accepted, and it'll start working.\n\n## Installation\n\n```\n$ bower install pinch-grid\n$ npm install pinch-grid --save\n$ component install blakeembrey/pinch-grid\n```\n\n## Stylus API\n\n```\n// Enable Bootstrap support for the `.offset` class and no grid prefix\nsupport-for-bootstrap = false\n\n// Support for old IE - currently enables the `rem` to `px` fallback for IE8\nsupport-for-ie = true\n\n// Grid system configuration\ngrid-prefix       = \"grid\" // Prefix all grid classes with this variable (disabled with Bootstrap support)\ngrid-alignment    = left // Alignment of the grid columns within a grid row\ngrid-gutter-width = 1.5rem // Gutter spacing between grid columns\ngrid-force-suffix = false // Force the suffix for single column count grids\n\ngrid-generate(columns, prefix)\n\n\ngrid-generate(6 12)\n\n// Results in two grids\n.grid-(span|push|pull|prefix|suffix)([0-6])of6\n.grid-(span|push|pull|prefix|suffix)([0-12])of12\n\ngrid-prefix = \"\" // Disable grid class prefixing\n\ngrid-generate(12)\n\n// Results in a single unprefixed grid without the `of(x)` syntax\n.(span|push|pull|prefix|suffix)([0-12])\n\ngrid-prefix = \"grid\"\nsupport-for-bootstrap = true\n\ngrid-generate(12)\n\n// Results in a single unprefixed grid with an `.offset(x)` class\n.(span|push|pull|prefix|offset|suffix)([0-12])\n\nsupport-for-bootstrap = false\n\ngrid-generate(12, \"desktop\")\n\n// Results in a grid prefixed and class prefixed grid output\n.grid-desktop-(span|push|pull|prefix|suffix)([0-12])\n```\n\n## CSS API\n\n```\n.grid-container /* Use this class for the page conatiner */\n.grid-row /* Use this class to mark up a grid row */\n.grid-span(x) /* This element span 100% / 12 * `x` width */\n.grid-(push|pull)(x) /* Use these classes to rearrange markup for SEO or device context */\n.grid-(prefix|suffix)(x) /* Use these classes to prepend or append `x` width worth of whitespace */\n```\n\nBy default the CSS grid is built for a single viewport and twelve columns. Using the Stylus API you can easily generate a number of different grid columns at different viewport sizes.\n\n## License\n\nMIT\n",
+  "readmeFilename": "Readme.md",
+  "_id": "pinch-grid@0.0.2",
+  "description": "Powerful fluid grid generator for Stylus and CSS. Using `inline-block` and `box-sizing` for pure awesomeness. It is built as a dropin replacement for most other grids, noteably Bootstrap, but it can be used for sizing almost any element - not just grids.",
+  "commit": "6d92381a2adbdca56f128ebc0e70b9a684b367e8",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/blakeembrey/pinch-grid.git"
+  }
+}

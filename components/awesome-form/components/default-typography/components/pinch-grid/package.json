@@ -1,0 +1,33 @@
+{
+  "name": "pinch-grid",
+  "version": "0.0.2",
+  "description": "Powerful fluid grid generator for Stylus and CSS",
+  "main": "lib/grid.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "",
+  "keywords": [
+    "grid",
+    "fluid",
+    "grid",
+    "responsive",
+    "responsive",
+    "grid",
+    "css",
+    "grid",
+    "stylus"
+  ],
+  "author": "Blake Embrey",
+  "license": "MIT",
+  "readmeFilename": "Readme.md",
+  "devDependencies": {
+    "grunt": "~0.4.0",
+    "grunt-contrib-stylus": "~0.4.0rc7",
+    "grunt-contrib-watch": "~0.2.0rc7"
+  },
+  "peerDependencies": {
+    "stylus": "0.x"
+  },
+  "dependencies": {}
+}

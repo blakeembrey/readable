@@ -1,0 +1,32 @@
+{
+  "name": "readable",
+  "version": "0.0.1",
+  "subdomain": "read",
+  "private": true,
+  "description": "Make any article readable again",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "",
+  "keywords": [
+    "readability",
+    "clean",
+    "minimal"
+  ],
+  "author": "Blake Embrey",
+  "license": "MIT",
+  "dependencies": {
+    "readabilitySAX": "~1.6.1",
+    "connect": "~2.7.4",
+    "request": "~2.16.6",
+    "cheerio": "~0.10.8",
+    "handlebars": "~1.0.10"
+  },
+  "devDependencies": {
+    "grunt-release": "~0.3.3",
+    "grunt-contrib-watch": "~0.3.1",
+    "grunt-contrib-stylus": "~0.5.0",
+    "grunt": "~0.4.1"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "default-typography",
+  "main": [
+    "./typography.css"
+  ],
+  "version": "0.0.0",
+  "dependencies": {
+    "stylus-type-utils": "*",
+    "pinch-grid": "*"
+  },
+  "gitHead": "7c82bba70f86ac194ff851d6b40dd04393b7463b",
+  "readme": "# Default Typography\n\nSimple default typography and font style decisions. Contains a few base resets and style normalizations for a consistent cross-browser experience.\n",
+  "readmeFilename": "Readme.md",
+  "_id": "default-typography@0.0.5",
+  "description": "Simple default typography and font style decisions. Contains a few base resets and style normalizations for a consistent cross-browser experience.",
+  "commit": "7c82bba70f86ac194ff851d6b40dd04393b7463b",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/blakeembrey/default-typography.git"
+  }
+}

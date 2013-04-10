@@ -1,0 +1,20 @@
+{
+  "name": "style-buttons",
+  "version": "0.0.0",
+  "main": [
+    "./buttons.css"
+  ],
+  "dependencies": {
+    "stylus-type-utils": "latest"
+  },
+  "gitHead": "370936b711222c46705232a663e342a5c51b7103",
+  "readme": "# Style Buttons\n\nBeautiful and consistent cross-browser CSS buttons. Supports multiple colored versions, as well as disabled, focus, hover and active states. Even includes a `quiet` state (no gradients) and a `pill` state (rounded corners).\n\n## Installation\n\n```\n$ bower install style-buttons\n$ component install blakeembrey/style-buttons\n$ npm install style-buttons --save\n```\n\n## Stylus API\n\n```\n// Using the base variables means it matches the rest of the sites design\nbase-font-size     = 100%\nbase-line-height   = 1.5\nbase-border-radius = 3px\n\n// Plenty of built in button styles, as well a customizable base class name\nbuttons-class-name                   = \"btn\"\n\nbuttons-background                   = #f5f8fa\nbuttons-background-highlight         = #e3e5e5\n\nbuttons-primary-background           = #08c\nbuttons-primary-background-highlight = darken(buttons-primary-background, 10%)\n\nbuttons-info-background              = #5bc0de\nbuttons-info-background-highlight    = #2f96b4\n\nbuttons-success-background           = #62c462\nbuttons-success-background-highlight = #51a351\n\nbuttons-warning-background           = lighten(#f89406, 15%)\nbuttons-warning-background-highlight = #f89406\n\nbuttons-danger-background            = #ee5f5b\nbuttons-danger-background-highlight  =  #bd362f\n\nbuttons-inverse-background           = #7a7c7c\nbuttons-inverse-background-highlight = #5f6060\n```\n\nThis is the base configuration, all variables be overriden ahead of time. This will give a few base button classes available for use.\n\n## CSS API\n\n```\n.btn // Base button class\n.btn-(primary|info|success|warning|danger|inverse) // Extending classes - each with a unique color and style\n.btn-quiet // Removes the gradient for a flatter button\n.btn-pill // Gives all the buttons rounded corners\n.btn.disabled, .btn[disabled] // Styles the button as disabled and stops hover actions\n.btn-block // Full width button\n```\n\nBy default, all the classes work on all the diferent colored buttons. You can easily add more buttons using the Stylus API.\n\n## License\n\nMIT\n",
+  "readmeFilename": "Readme.md",
+  "_id": "style-buttons@0.0.4",
+  "description": "Beautiful and consistent cross-browser CSS buttons. Supports multiple colored versions, as well as disabled, focus, hover and active states. Even includes a `quiet` state (no gradients) and a `pill` state (rounded corners).",
+  "commit": "370936b711222c46705232a663e342a5c51b7103",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/blakeembrey/style-buttons.git"
+  }
+}

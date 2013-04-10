@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf8">
+    <title>Pinch Grid - CSS Layout Generator</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="grid.css">
+    <style>
+      html { font-size: 100%; }
+      body { font-family: sans-serif; line-height: 1.5; margin: 0; }
+      a { color: #0088cc; text-decoration: none; }
+      a:hover, a:focus, a:active { color: #005580; text-decoration: underline; }
+      p { margin: 1.5em 0; }
+      pre, code { background-color: #f7f7f9; border: 1px solid #e1e1e8; color: #d14; padding: 0.15em 0.3em; border-radius: 3px; }
+      pre { overflow-x: auto; padding: 1.25em; border-left-width: 10px; margin: 1.5em 0; font-size: 0.925em; white-space: pre; word-wrap: normal; font-family: monospace; }
+      pre code { background-color: none; border: none; }
+      h1, h2, h3 { line-height: 1.1; margin: 1em 0; }
+      h1 { font-size: 3em; }
+      h2 { font-size: 1.75em; }
+      h3 { font-size: 1.5em; }
+      hr { border: 1px dashed #ccc; border-left: 0; border-right: 0; border-bottom-color: #fff; margin: 1.5em 0; padding: 0; }
+      .grid-container { max-width: 44em; }
+      .show-grid { margin-top: 0.75em; margin-bottom: 0.75em; }
+      .show-span { margin-top: 0.25em; margin-bottom: 0.25em; text-align: center; background-color: #eee; border-radius: 3px; min-height: 2.5em; line-height: 2.5em; }
+      .show-span .show-span { margin-top: 0; margin-bottom: 0; background-color: #ccc; }
+      .text-center { text-align: center; }
+      .text-right { text-align: right; }
+      @media (min-width: 30em) {
+        .sidebar { float: left; width: 20em; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid-container">
+      <h1>Pinch Grid</h1>
+      <p>Pinch is a fluid grid system utilizing <code>inline-block</code> and <code>box-sizing</code> for awesomeness. The grid uses twelve units by default and makes layouts a breeze to build. The grid is supported by all modern browsers and IE8+.</p>
+
+      <h2>Benefits and considerations</h2>
+
+      <ul>
+        <li>No more <code>.end</code> or <code>.last</code> classes</li>
+        <li>No more <code>.clearfix</code> and float hacks</li>
+        <li>No more broken layouts at different sizes when grid cells wrap</li>
+        <li>Construct responsive grids with minimal effort</li>
+        <li>Unlimited grid nesting</li>
+        <li>SEO friendly <code>.push*</code> and <code>.pull*</code> classes</li>
+        <li>Simple grid cell offset utilities</li>
+        <li>Hybrid fixed and fluid with span combinations</li>
+      </ul>
+
+      <h2>Basic grid example</h2>
+      <div class="show-grid grid-row">
+        <div class="grid-span1"><div class="show-span">1</div></div>
+        <div class="grid-span1"><div class="show-span">1</div></div>
+        <div class="grid-span1"><div class="show-span">1</div></div>
+        <div class="grid-span1"><div class="show-span">1</div></div>
+        <div class="grid-span1"><div class="show-span">1</div></div>
+        <div class="grid-span1"><div class="show-span">1</div></div>
+        <div class="grid-span1"><div class="show-span">1</div></div>
+        <div class="grid-span1"><div class="show-span">1</div></div>
+        <div class="grid-span1"><div class="show-span">1</div></div>
+        <div class="grid-span1"><div class="show-span">1</div></div>
+        <div class="grid-span1"><div class="show-span">1</div></div>
+        <div class="grid-span1"><div class="show-span">1</div></div>
+      </div>
+      <div class="show-grid grid-row">
+        <div class="grid-span2"><div class="show-span">2</div></div>
+        <div class="grid-span2"><div class="show-span">2</div></div>
+        <div class="grid-span2"><div class="show-span">2</div></div>
+        <div class="grid-span2"><div class="show-span">2</div></div>
+        <div class="grid-span2"><div class="show-span">2</div></div>
+        <div class="grid-span2"><div class="show-span">2</div></div>
+      </div>
+      <div class="show-grid grid-row">
+        <div class="grid-span3"><div class="show-span">3</div></div>
+        <div class="grid-span3"><div class="show-span">3</div></div>
+        <div class="grid-span3"><div class="show-span">3</div></div>
+        <div class="grid-span3"><div class="show-span">3</div></div>
+      </div>
+      <div class="show-grid grid-row">
+        <div class="grid-span4"><div class="show-span">4</div></div>
+        <div class="grid-span4"><div class="show-span">4</div></div>
+        <div class="grid-span4"><div class="show-span">4</div></div>
+      </div>
+      <div class="show-grid grid-row">
+        <div class="grid-span6"><div class="show-span">6</div></div>
+        <div class="grid-span6"><div class="show-span">6</div></div>
+      </div>
+      <div class="show-grid grid-row">
+        <div class="grid-span12"><div class="show-span">12</div></div>
+      </div>
+
+      <h3>Basic grid HTML</h3>
+      <p>For a simple two column layout, create a <code>.grid-row</code> and add a number of <code>.grid-span*</code> units. The units can wrap to another line at different viewports without breaking functionality. Since the base grid has twelve units, create a number of units totalling twelve.</p>
+
+<pre><code>&lt;div class=&quot;grid-row&quot;&gt;
+  &lt;div class=&quot;grid-span7&quot;&gt;...&lt;/div&gt;
+  &lt;div class=&quot;grid-span5&quot;&gt;...&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+      <h2>Nested units</h2>
+      <div class="show-grid grid-row">
+        <div class="grid-span12"><div class="show-span">Level 1</div></div>
+        <div class="grid-span9">
+          <div class="show-span">
+            <div class="grid-row">
+              <div class="grid-span6"><div class="show-span">Level 2</div></div>
+              <div class="grid-span6"><div class="show-span">Level 2</div></div>
+            </div>
+          </div>
+        </div>
+        <div class="grid-span3">
+          <div class="show-span">Level 1</div>
+        </div>
+      </div>
+
+<pre><code>&lt;div class=&quot;grid-row&quot;&gt;
+  &lt;div class=&quot;grid-span12&quot;&gt;Level 1&lt;/div&gt;
+  &lt;div class=&quot;grid-span9&quot;&gt;
+    &lt;div class=&quot;grid-row&quot;&gt;
+      &lt;div class=&quot;grid-span6&quot;&gt;Level 2&lt;/div&gt;
+      &lt;div class=&quot;grid-span6&quot;&gt;Level 2&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;grid-span3&quot;&gt;Level 1&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+      <h2>Align grid units</h2>
+
+      <p>Grids can easily be aligned by using the <code>text-align</code> css property.</p>
+
+      <div class="show-grid grid-row text-left">
+        <div class="grid-span6"><div class="show-span">Left aligned</div></div>
+      </div>
+      <div class="show-grid grid-row text-center">
+        <div class="grid-span6"><div class="show-span">Centered</div></div>
+      </div>
+      <div class="show-grid grid-row text-right">
+        <div class="grid-span6"><div class="show-span">Right aligned</div></div>
+      </div>
+
+      <h2>Grid offets</h2>
+
+      <p>Grid units can be offset using <code>.grid-prefix*</code> and <code>.grid-suffix*</code>. As the names suggest, they add space correspsonding to the grid units before and after the grid column.</p>
+
+      <div class="show-grid grid-row">
+        <div class="grid-span1"><div class="show-span">1</div></div>
+        <div class="grid-span6 grid-prefix2 grid-suffix2">
+          <div class="show-span">6 prefix 2 suffix 2</div>
+        </div>
+        <div class="grid-span1"><div class="show-span">1</div></div>
+      </div>
+
+      <div class="show-grid grid-row">
+        <div class="grid-span3 grid-suffix2">
+          <div class="show-span">3 suffix 2</div>
+        </div>
+        <div class="grid-span2">
+          <div class="show-span">2</div>
+        </div>
+        <div class="grid-span3 grid-prefix2">
+          <div class="show-span">3 prefix 2</div>
+        </div>
+      </div>
+
+<pre><code>&lt;div class=&quot;grid-row&quot;&gt;
+  &lt;div class=&quot;grid-span1&quot;&gt;1&lt;/div&gt;
+  &lt;div class=&quot;grid-span6 grid-prefix2 grid-suffix2&quot;&gt;
+    6 prefix 2 suffix 2
+  &lt;/div&gt;
+  &lt;div class=&quot;grid-span1&quot;&gt;1&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+      <h2>Hybrid units</h2>
+
+      <p>The grid system allows for mixed fixed and fluid width units, which can be incredibly useful for content such as advertising units and sidebars. A simple sidebar can be created by adding a custom class that sets the float and width. E.g. <code>.sidebar { float: left; width: 20em; }</code>.</p>
+
+      <div class="show-grid grid-row">
+        <div class="grid-span12"><div class="show-span">12</div></div>
+        <div class="grid-span sidebar">
+          <div class="show-span">Fixed width sidebar</div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-span12"><div class="show-span">12</div></div>
+          <div class="grid-span6">
+            <div class="show-span">6</div>
+          </div>
+          <div class="grid-span6">
+            <div class="show-span">6</div>
+          </div>
+        </div>
+      </div>
+
+<pre><code>&lt;div class=&quot;grid-row&quot;&gt;
+  &lt;div class=&quot;grid-span12&quot;&gt;12&lt;/div&gt;
+  &lt;div class=&quot;grid-span sidebar&quot;&gt;Fixed width sidebar&lt;/div&gt;
+  &lt;div class=&quot;grid-row&quot;&gt;
+    &lt;div class=&quot;grid-span12&quot;&gt;12&lt;/div&gt;
+    &lt;div class=&quot;grid-span6&quot;&gt;6&lt;/div&gt;
+    &lt;div class=&quot;grid-span6&quot;&gt;6&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+      <h2>Push and pull units</h2>
+
+      <p>Grid units can easily be rearranged visually without affecting source order by using the built in <code>.grid-push*</code> and <code>.grid-pull*</code>. As the names suggest, these classes are measured by the grid system and are used to push or pull the units order.</p>
+
+      <div class="grid-row">
+        <div class="grid-span6 grid-push6"><div class="show-span">First</div></div>
+        <div class="grid-span6 grid-pull6"><div class="show-span">Second</div></div>
+      </div>
+
+<pre><code>&lt;div class=&quot;grid-row&quot;&gt;
+  &lt;div class=&quot;grid-span6 grid-push6&quot;&gt;First&lt;/div&gt;
+  &lt;div class=&quot;grid-span6 grid-pull6&quot;&gt;Second&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+      <hr>
+
+      <p class="text-center">
+        <a href="http://blakeembrey.me">Blake Embrey</a> &mdash; <a href="http://twitter.com/blakeembrey">@blakeembrey</a>
+      </p>
+
+    </div>
+  </body>
+</html>

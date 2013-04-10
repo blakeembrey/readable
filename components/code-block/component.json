@@ -1,0 +1,20 @@
+{
+  "name": "code-block",
+  "main": [
+    "./code-block.css"
+  ],
+  "version": "0.0.0",
+  "dependencies": {
+    "stylus-type-utils": "latest"
+  },
+  "gitHead": "6839302e61e2a490b8f9e0bbd8bf3e270a98aac5",
+  "readme": "# Code Blocks\n\nSimple CSS code block style resets. For `pre`, `code` and `kbd` HTML tags.\n\n## Installation\n\n```\n$ bower install code-block\n$ npm install code-block --save\n$ component install blakeembrey/code-block\n```\n\n## CSS API\n\nProvides styles for `pre`, `code` and `kbd` tags, plus a single class called `.pre-scrollable` which makes the `pre` tag scrollable vertically.\n\n## License\n\nMIT\n",
+  "readmeFilename": "Readme.md",
+  "_id": "code-block@0.0.3",
+  "description": "Simple CSS code block style resets. For `pre`, `code` and `kbd` HTML tags.",
+  "commit": "6839302e61e2a490b8f9e0bbd8bf3e270a98aac5",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/blakeembrey/code-block.git"
+  }
+}

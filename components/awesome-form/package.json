@@ -1,0 +1,26 @@
+{
+  "name": "awesome-form",
+  "version": "0.0.1",
+  "description": "",
+  "main": "lib/form.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "",
+  "keywords": [
+    "forms",
+    "stylus"
+  ],
+  "author": "Blake Embrey",
+  "license": "MIT",
+  "readmeFilename": "Readme.md",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-stylus": "~0.5.0",
+    "grunt-contrib-watch": "~0.3.1"
+  },
+  "peerDependencies": {
+    "stylus": "0.x"
+  },
+  "dependencies": {}
+}

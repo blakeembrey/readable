@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf8">
+    <title>Style Buttons</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="buttons.css">
+    <style>
+      html { font-size: 100%; }
+      body { font-family: sans-serif; line-height: 1.5; margin: 0; }
+      p { margin: 0.75em 0; }
+
+      *, *:before, *:after { box-sizing: border-box; -moz-box-sizing: border-box; }
+
+      .buttons-preview { float: left; width: 100%; height: 11em; padding: 1.5em 2em; border: 1px solid rgba(0, 0, 0, 0.1); background-color: #f9f9f9; border-top-width: 0; border-left-width: 0; border-right-width: 0; overflow: hidden; }
+      .buttons-preview p { margin: 0 auto; width: 25em; text-align: left; }
+      .buttons-preview p + p { margin-top: 0.75em; }
+      .btn + .btn { margin-left: 10px; }
+
+      @media (min-width: 48em) {
+        .buttons-preview { width: 50%; }
+        .buttons-preview:nth-child(2n+1) { border-right-width: 1px; }
+      }
+
+      @media (min-width: 68em) {
+        .buttons-preview { width: 33.33%; border-right-width: 0; }
+        .buttons-preview:nth-child(3n+1), .buttons-preview:nth-child(3n+2) { border-right-width: 1px; }
+        .buttons-preview-sizes { width: 66.66%; }
+      }
+
+      .buttons-preview-types { width: 100%; height: auto; text-align: center; }
+      .buttons-preview-types p { display: inline-block; margin: 0; }
+    </style>
+  </head>
+  <body>
+    <section class="buttons-preview">
+      <p>
+        <a href="javascript:;" class="btn">Button</a>
+        <a href="javascript:;" class="btn disabled">Disabled Button</a>
+      </p>
+      <p>
+        <a href="javascript:;" class="btn btn-quiet">Quiet Button</a>
+        <a href="javascript:;" class="btn btn-quiet disabled">Disabled Quiet Button</a>
+      </p>
+      <p>
+        <a href="javascript:;" class="btn btn-pill">Pill Button</a>
+        <a href="javascript:;" class="btn btn-pill disabled">Disabled Pill Button</a>
+      </p>
+    </section>
+
+    <section class="buttons-preview buttons-preview-primary">
+      <p>
+        <a href="javascript:;" class="btn btn-primary">Button</a>
+        <a href="javascript:;" class="btn btn-primary disabled">Disabled Button</a>
+      </p>
+      <p>
+        <a href="javascript:;" class="btn btn-primary btn-quiet">Quiet Button</a>
+        <a href="javascript:;" class="btn btn-primary btn-quiet disabled">Disabled Quiet Button</a>
+      </p>
+      <p>
+        <a href="javascript:;" class="btn btn-primary btn-pill">Pill Button</a>
+        <a href="javascript:;" class="btn btn-primary btn-pill disabled">Disabled Pill Button</a>
+      </p>
+    </section>
+
+    <section class="buttons-preview buttons-preview-info">
+      <p>
+        <a href="javascript:;" class="btn btn-info">Button</a>
+        <a href="javascript:;" class="btn btn-info disabled">Disabled Button</a>
+      </p>
+      <p>
+        <a href="javascript:;" class="btn btn-info btn-quiet">Quiet Button</a>
+        <a href="javascript:;" class="btn btn-info btn-quiet disabled">Disabled Quiet Button</a>
+      </p>
+      <p>
+        <a href="javascript:;" class="btn btn-info btn-pill">Pill Button</a>
+        <a href="javascript:;" class="btn btn-info btn-pill disabled">Disabled Pill Button</a>
+      </p>
+    </section>
+
+    <section class="buttons-preview buttons-preview-success">
+      <p>
+        <a href="javascript:;" class="btn btn-success">Button</a>
+        <a href="javascript:;" class="btn btn-success disabled">Disabled Button</a>
+      </p>
+      <p>
+        <a href="javascript:;" class="btn btn-success btn-quiet">Quiet Button</a>
+        <a href="javascript:;" class="btn btn-success btn-quiet disabled">Disabled Quiet Button</a>
+      </p>
+      <p>
+        <a href="javascript:;" class="btn btn-success btn-pill">Pill Button</a>
+        <a href="javascript:;" class="btn btn-success btn-pill disabled">Disabled Pill Button</a>
+      </p>
+    </section>
+
+    <section class="buttons-preview buttons-preview-warning">
+      <p>
+        <a href="javascript:;" class="btn btn-warning">Button</a>
+        <a href="javascript:;" class="btn btn-warning disabled">Disabled Button</a>
+      </p>
+      <p>
+        <a href="javascript:;" class="btn btn-warning btn-quiet">Quiet Button</a>
+        <a href="javascript:;" class="btn btn-warning btn-quiet disabled">Disabled Quiet Button</a>
+      </p>
+      <p>
+        <a href="javascript:;" class="btn btn-warning btn-pill">Pill Button</a>
+        <a href="javascript:;" class="btn btn-warning btn-pill disabled">Disabled Pill Button</a>
+      </p>
+    </section>
+
+    <section class="buttons-preview buttons-preview-danger">
+      <p>
+        <a href="javascript:;" class="btn btn-danger">Button</a>
+        <a href="javascript:;" class="btn btn-danger disabled">Disabled Button</a>
+      </p>
+      <p>
+        <a href="javascript:;" class="btn btn-danger btn-quiet">Quiet Button</a>
+        <a href="javascript:;" class="btn btn-danger btn-quiet disabled">Disabled Quiet Button</a>
+      </p>
+      <p>
+        <a href="javascript:;" class="btn btn-danger btn-pill">Pill Button</a>
+        <a href="javascript:;" class="btn btn-danger btn-pill disabled">Disabled Pill Button</a>
+      </p>
+    </section>
+
+    <section class="buttons-preview buttons-preview-inverse">
+      <p>
+        <a href="javascript:;" class="btn btn-inverse">Button</a>
+        <a href="javascript:;" class="btn btn-inverse disabled">Disabled Button</a>
+      </p>
+      <p>
+        <a href="javascript:;" class="btn btn-inverse btn-quiet">Quiet Button</a>
+        <a href="javascript:;" class="btn btn-inverse btn-quiet disabled">Disabled Quiet Button</a>
+      </p>
+      <p>
+        <a href="javascript:;" class="btn btn-inverse btn-pill">Pill Button</a>
+        <a href="javascript:;" class="btn btn-inverse btn-pill disabled">Disabled Pill Button</a>
+      </p>
+    </section>
+
+    <section class="buttons-preview buttons-preview-sizes">
+      <p>
+        <a href="javascript:;" class="btn btn-mini">Mini Button</a>
+        <a href="javascript:;" class="btn btn-mini disabled">Disabled Mini Button</a>
+      </p>
+      <p>
+        <a href="javascript:;" class="btn btn-small">Small Button</a>
+        <a href="javascript:;" class="btn btn-small disabled">Disabled Small Button</a>
+      </p>
+      <p>
+        <a href="javascript:;" class="btn btn-large">Large Button</a>
+        <a href="javascript:;" class="btn btn-large disabled">Disabled Large Button</a>
+      </p>
+    </section>
+
+    <section class="buttons-preview buttons-preview-types">
+      <p>
+        <a href="javascript:;" class="btn">Link Button</a>
+        <a href="javascript:;" class="btn disabled">Disabled Link Button</a>
+      </p>
+      <p>
+        <input type="button" class="btn" value="Input Button">
+        <input type="button" class="btn disabled" value="Disabled Input Button">
+      </p>
+      <p>
+        <input type="submit" class="btn" value="Submit Button">
+        <input type="submit" class="btn disabled" value="Disabled Submit Button">
+      </p>
+      <p>
+        <button class="btn">Button</button>
+        <button class="btn disabled">Disabled Button</button>
+      </p>
+    </section>
+  </body>
+</html>

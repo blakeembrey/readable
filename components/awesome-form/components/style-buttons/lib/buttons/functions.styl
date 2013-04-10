@@ -1,0 +1,25 @@
+buttons-generate(start-color, end-color, text-color = #fdfdfd)
+	&,
+	// Target disabled directly here for browser that don't support `pointer-events`
+	&.disabled,
+	&[disabled],
+	&.disabled:hover,
+	&[disabled]:hover,
+	&.disabled:active,
+	&[disabled]:active,
+	&.disabled.active,
+	&[disabled].active,
+	fieldset[disabled] &
+		color: text-color
+		text-shadow: 0 -1px 0 end-color
+		border-color: darken(end-color, 30%)
+		background-color: start-color
+		background-image: linear-gradient(top, start-color, end-color)
+		background-repeat: repeat-x
+	&:hover
+		background-image: linear-gradient(top, lighten(start-color, 7%), lighten(end-color, 7%))
+	&:active,
+	&.active
+		color: text-color
+		background-color: end-color
+		background-image: none

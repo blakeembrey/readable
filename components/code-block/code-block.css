@@ -1,0 +1,58 @@
+kbd,
+pre,
+code,
+samp {
+  font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+  font-size: 1em;
+}
+pre,
+code {
+  color: #333;
+  padding: 0 0.2em 0.15em;
+  overflow: auto;
+  font-size: 95%;
+  line-height: 1.5;
+  white-space: pre;
+  border-radius: 3px;
+}
+code {
+  color: #c7254e;
+  font-size: 85%;
+  padding: 0.2em 0.3em;
+  background-color: #f9f2f4;
+}
+pre {
+  margin: 0 0 0.75em;
+  padding: 1em;
+  display: block;
+  line-height: 1.5;
+  border: 1px solid #ccc;
+  border-left-width: 6px;
+  background: #f5f5f5;
+}
+pre code {
+  color: inherit;
+  border: 0;
+  padding: 0;
+  font-size: 100%;
+  background: none;
+}
+.pre-scrollable {
+  max-height: 15.5em;
+  overflow-y: scroll;
+}
+kbd {
+  display: inline-block;
+  margin: 0 0.1em;
+  padding: 0.1em 0.6em;
+  color: #333;
+  font-size: 0.7em;
+  line-height: 1.4;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  vertical-align: middle;
+  text-shadow: 0 1px 0 #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.2), 0 0 0 2px #fff inset;
+  background: #f5f5f5;
+  border-radius: 3px;
+}

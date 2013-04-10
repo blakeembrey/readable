@@ -1,0 +1,339 @@
+@import "../../components/stylus-type-utils"
+
+// HTML Style Resets
+// https://github.com/necolas/normalize.css/blob/master/normalize.css
+// -------------------------
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary
+  display: block
+
+audio,
+canvas,
+video
+  display: inline-block
+
+audio:not([controls])
+  display: none
+  height: 0
+
+[hidden]
+  display: none
+
+
+// Body text
+// -------------------------
+
+html
+  color: base-text-color
+  background: base-background
+  font-size: percent(base-font-size)
+  font-family: base-font-family
+  line-height: base-line-height
+  -ms-text-size-adjust: 100%
+  -webkit-text-size-adjust: 100%
+
+body
+  margin: 0
+
+p
+  margin: 0 0 (em(base-line-height) / 2)
+
+.lead
+  font-size: 150%
+  font-weight: 100
+  line-height: unit(em(base-line-height), '') // Unit-less measurements
+  margin-bottom: (em(base-line-height) / em(@font-size))
+
+
+// Subscript and superscript
+// -------------------------
+sub,
+sup
+  font-size: 75%
+  line-height: 0
+  position: relative
+  vertical-align: baseline
+
+sup
+  top: -0.5em
+
+sub
+  bottom: -0.25em
+
+
+// Links
+// -------------------------
+
+a
+  color: base-link-color
+  text-decoration: none
+
+a:focus,
+a:hover,
+a:active
+  color: base-link-color-hover
+
+a:hover
+  text-decoration: underline
+
+
+// Emphasis & misc
+// -------------------------
+
+small,
+.text-small
+  font-size: 75%
+b,
+strong,
+.text-bold
+  font-weight: bold
+
+em,
+dfn,
+cite
+  font-style: italic
+
+mark,
+.text-highlight
+  color: black
+  background: #ff0
+
+.text-left
+  text-align: left
+.text-right
+  text-align: right
+.text-center
+  text-align: center
+
+
+// Embedable content
+// -------------------------
+img
+  border: 0 // Remove border when inside `a` element in IE 8/9
+  width: auto
+  height: auto
+  max-width: 100%
+  vertical-align: middle
+  // `max-width` doesn't play very well with Google Maps
+  .google-maps &
+    max-width: auto
+
+svg:not(:root)
+  overflow: hidden // Correct overflow displayed oddly in IE 9
+
+figure
+  margin: 0 // Address margin not present in IE 8/9 and Safari 5
+
+// Headings
+// -------------------------
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6
+  color: base-heading-color
+  margin: em(base-line-height / 2) 0
+  font-family: base-heading-font-family
+  font-weight: base-heading-font-weight
+  line-height: 1.2
+  small
+    color: #999
+    font-weight: normal
+    line-height: 1
+
+h1,
+.h1
+  font-size: 2.5em
+  margin: (em(base-line-height / 2) / @font-size) 0
+h2,
+.h2
+  font-size: 1.8em
+  margin: (em(base-line-height / 2) / @font-size) 0
+h3,
+.h3
+  font-size: 1.5em
+  margin: (em(base-line-height / 2) / @font-size) 0
+h4,
+.h4
+  font-size: 1.25em
+  margin: (em(base-line-height / 2) / @font-size) 0
+h5,
+.h5
+  font-size: 1em
+  margin: (em(base-line-height / 2) / @font-size) 0
+h6,
+.h6
+  font-size: 0.875em
+  margin: (em(base-line-height / 2) / @font-size) 0
+
+
+// Lists
+// --------------------------------------------------
+
+// Unordered and Ordered lists
+ul
+  list-style: disc
+ol
+  list-style: decimal
+ul,
+ol
+  margin: 0 0 em(base-line-height / 2) 1.8em
+  padding: 0
+ul ul,
+ul ol,
+ol ol,
+ol ul
+  margin-bottom: 0
+li
+  line-height: base-line-height
+
+// Remove default list styles
+ul.list-unstyled,
+ol.list-unstyled
+  margin-left: 0
+  list-style: none
+
+// Child lists should have a left margin
+ul ul.list-unstyled,
+ol ul.list-unstyled,
+ul ol.list-unstyled,
+ol ol.list-unstyled
+  margin-left: 1.8em
+
+// Single-line list items
+ul.list-inline,
+ol.list-inline
+  @extends ul.list-unstyled // Extends unstyled - identical behaviour
+  > li
+    display: inline-block
+    padding: 0 0.35em
+  ul.list-inline,
+  ol.list-inline
+    @extends ul ul.list-unstyled // Extends unstyled
+
+// Description lists
+dl
+  margin-bottom: em(base-line-height)
+dt,
+dd
+  line-height: base-line-height
+dt
+  font-weight: bold
+dd
+  margin-left: em(base-line-height / 2)
+
+// Horizontal layout (like forms)
+.dl-horizontal
+  &:after,
+  &:before
+    content: " "
+    display: table
+  &:after
+    clear: both
+  dt
+    overflow: ellipsis
+    @media only screen and (min-width: 48em)
+      width: (base-horizontal-component-offset * 0.925)
+      float: left
+      clear: left
+      text-align: right
+  dd
+    @media only screen and (min-width: 48em)
+      margin-left: base-horizontal-component-offset
+
+
+// MISC
+// ----
+
+// Horizontal rules
+hr,
+.divider
+  height: 0
+  overflow: hidden
+  margin: em(base-line-height) 0
+  border-top: solid base-hr-border
+  border-width: 1px 0
+  border-bottom: solid white
+
+.divider
+  margin: 0.675em 0.07em
+
+// Abbreviations and acronyms
+abbr
+  cursor: help
+  border-bottom: 1px dotted #999
+.initialism
+  font-size: 90%
+  text-transform: uppercase
+
+// Sets consistent quote types
+q,
+blockquote
+  quotes: "\201C" "\201D" "\2018" "\2019"
+
+// Blockquotes
+blockquote
+  position: relative
+  margin: em(base-line-height / 2) 0 em(base-line-height)
+  padding-top: 1em
+  padding-left: 3em
+  &:before
+    content: "\201C"
+    color: #ddd
+    font-size: 8em
+    line-height: 1
+    font-weight: 200
+    position: absolute
+    top: -0.125em
+    left: 0
+  p
+    font-size: rem(1.15)
+    font-weight: 200
+    line-height: base-line-height * 1.25
+    margin-bottom: 0
+  cite
+    color: #999
+    display: block
+    line-height: base-line-height
+    &:before
+      content: "\2014 \00A0"
+  // Float right with text-align: right
+  &.pull-right
+    padding-right: @padding-left // Inherits from left aligned view
+    padding-left: 0
+    &:before
+      content: "\201D"
+      left: auto
+      right: 0
+    p,
+    cite
+      text-align: right
+    cite:before
+      content: ""
+    cite:after
+      content: "\00A0 \2014"
+
+// Addresses
+address
+  display: block
+  font-style: normal
+  line-height: base-line-height
+  margin-bottom: em(base-line-height)

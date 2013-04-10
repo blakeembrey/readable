@@ -1,0 +1,10 @@
+// Import from installed modules
+@import "../../components/stylus-type-utils"
+
+// Import the grid generator
+@import "core"
+@import "grid"
+
+grid-generate($units, $prefix = "")
+	grid-generate-container()
+	grid-generate-columns($units, $prefix)

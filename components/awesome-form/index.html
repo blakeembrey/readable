@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>Awesome Form • Clean Form CSS Resets</title>
+    <meta name="author" content="Blake Embrey">
+    <meta name="viewport" content="width=device-width">
+
+    <link rel="stylesheet" href="components/pinch-grid/grid.css">
+    <link rel="stylesheet" href="components/default-typography/typography.css">
+    <link rel="stylesheet" href="components/style-buttons/buttons.css">
+    <link rel="stylesheet" href="form.css">
+  </head>
+  <body>
+
+    <div class="grid-container">
+
+      <h1>Awesome Form</h1>
+
+      <div class="grid-row">
+        <form class="grid-span grid-tablet-span6">
+          <input type="text" placeholder="Text input">
+          <input type="email" placeholder="Email input">
+          <input type="password" placeholder="Password input">
+          <input type="tel" placeholder="Phone number">
+          <input type="number" placeholder="Numeric input">
+          <input type="searcg" placeholder="Search input">
+          <textarea placeholder="Textarea" rows="4"></textarea>
+          <select>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+          </select>
+          <select multiple="multiple">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+          </select>
+        </form>
+
+        <div class="grid-span grid-tablet-span6">
+          <form>
+            <legend>Legend</legend>
+            <label>Label name</label>
+            <input type="text" placeholder="Type something…">
+            <span class="help-block">Example block-level help text here.</span>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox"> Check me out
+              </label>
+            </div>
+            <button type="submit" class="btn">Submit</button>
+          </form>
+
+          <form>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox">
+                Here is a checkbox you can check for an achievement
+              </label>
+            </div>
+
+            <div class="radio">
+              <label>
+                <input type="radio" checked>
+                Here is a radio button that can be used to select the most awesome option
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio">
+                Option two is the most awesome option
+              </label>
+            </div>
+          </form>
+
+          <form>
+            <label class="checkbox-inline">
+              <input type="checkbox" id="inlineCheckbox1" value="option1"> 1
+            </label>
+            <label class="checkbox-inline">
+              <input type="checkbox" id="inlineCheckbox2" value="option2"> 2
+            </label>
+            <label class="checkbox-inline">
+              <input type="checkbox" id="inlineCheckbox3" value="option3"> 3
+            </label>
+          </form>
+
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="grid-row">
+        <div class="grid-span grid-tablet-span6">
+          <div class="control-group has-warning">
+            <label class="control-label" for="inputWarning">Input with warning</label>
+            <div class="controls">
+              <input type="text" id="inputWarning" class="input-with-feedback">
+              <span class="help-inline">Something may have gone wrong</span>
+            </div>
+          </div>
+          <div class="control-group has-error">
+            <label class="control-label" for="inputError">Input with error</label>
+            <div class="controls">
+              <input type="text" id="inputError" class="input-with-feedback">
+              <span class="help-inline">Please correct the error</span>
+            </div>
+          </div>
+          <div class="control-group has-success">
+            <label class="control-label" for="inputSuccess">Input with success</label>
+            <div class="controls">
+              <input type="text" id="inputSuccess" class="input-with-feedback">
+              <span class="help-inline">Woohoo!</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid-span grid-tablet-span6">
+          <form>
+            <input type="email" placeholder="Email" required>
+            <input type="password" class="span3" placeholder="Password" required>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox"> Remember me
+              </label>
+            </div>
+            <button type="submit" class="btn btn-primary">Sign in</button>
+          </form>
+
+          <form>
+            <fieldset disabled>
+              <input type="text" placeholder="Disabled input">
+              <select>
+                <option>Disabled select</option>
+              </select>
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox"> Can't check this
+                </label>
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="form-actions">
+      <button type="submit" class="btn btn-primary">Save changes</button>
+      <button type="button" class="btn">Cancel</button>
+    </div>
+
+  </body>
+</html>

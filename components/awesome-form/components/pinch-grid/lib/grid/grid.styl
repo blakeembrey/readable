@@ -1,0 +1,67 @@
+grid-generate-columns($units, $prefix = "")
+	$grid-prefix = ""
+	// Prefix with the grid variable
+	if grid-prefix and !support-for-bootstrap
+		$grid-prefix = s("%s-", unquote(grid-prefix))
+	// Set a prefix for the current generator
+	if $prefix
+		$prefix = s("%s-", unquote($prefix))
+	// The global prefix also need to be taken into account
+	if $grid-prefix
+		$prefix = s("%s%s", unquote($grid-prefix), unquote($prefix))
+
+	// Allow a loop around for the column count, allows for multiple grids within generator
+	for $columns in $units
+		.{$prefix}span,
+		.{$prefix}span12
+			display: inline-block
+			width: 100%
+			-moz-box-sizing: border-box
+			box-sizing: border-box
+			if support-for-ie and unit(grid-gutter-width) == "rem"
+				padding-left: rem(grid-gutter-width * 0.5)
+				padding-right: rem(grid-gutter-width * 0.5)
+			else
+				padding-left: (grid-gutter-width * 0.5)
+				padding-right: (grid-gutter-width * 0.5)
+			vertical-align: top
+
+		.{$prefix}push,
+		.{$prefix}pull
+			position: relative
+			left: 0
+
+		.{$prefix}prefix
+			margin-left: 0
+
+		.{$prefix}suffix
+			margin-right: 0
+
+		for $i in 0...$columns
+			$width  = (100% / $columns) * $i
+			$suffix = $i
+			if grid-force-suffix or length($units) > 1
+				$suffix = s("%sof%s", $i, $columns)
+
+			.{$prefix}span{$suffix}
+				@extend .{$prefix}span
+				width: $width
+
+			.{$prefix}prefix{$suffix}
+				margin-left: $width
+
+			.{$prefix}suffix{$suffix}
+				margin-right: $width
+
+			.{$prefix}push{$suffix}
+				@extend .{$prefix}push
+				left: $width
+
+			.{$prefix}pull{$suffix}
+				@extend .{$prefix}pull
+				left: $width * -1
+
+			// Support for bootstrap should extend the normal prefix class
+			if support-for-bootstrap
+				.{$prefix}offset{$suffix}
+					@extend .{$prefix}prefix{$suffix}

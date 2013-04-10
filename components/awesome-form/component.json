@@ -1,0 +1,20 @@
+{
+  "name": "awesome-form",
+  "version": "0.0.0",
+  "main": [
+    "./form.css"
+  ],
+  "dependencies": {
+    "stylus-type-utils": "latest"
+  },
+  "gitHead": "dd5558e2ecb4b13d8b82be815a86f6a44144de93",
+  "readme": "# Awesome Form",
+  "readmeFilename": "Readme.md",
+  "_id": "awesome-form@0.0.1",
+  "description": "",
+  "commit": "dd5558e2ecb4b13d8b82be815a86f6a44144de93",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/blakeembrey/awesome-form.git"
+  }
+}

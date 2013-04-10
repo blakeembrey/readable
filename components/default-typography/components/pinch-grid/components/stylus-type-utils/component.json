@@ -1,0 +1,9 @@
+{
+  "name": "stylus-type-utils",
+  "version": "0.0.0",
+  "commit": "913a2b42c4153aee56c718f8e9d512fed31067cd",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/blakeembrey/stylus-type-utils.git"
+  }
+}
