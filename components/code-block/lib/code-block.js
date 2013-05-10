@@ -6,5 +6,5 @@ var plugin = module.exports = function plugin () {
   };
 };
 
-plugin.path    = __dirname;
+plugin.path    = __dirname;.
 plugin.version = require(__dirname + '/../package.json').version;
