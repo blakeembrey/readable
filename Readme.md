@@ -1,5 +1,7 @@
 # Readable
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/blakeembrey/readable.svg)](https://greenkeeper.io/)
+
 Creates a plain text and readable version of any article on the internet by appending the url to the services domain. Has a extremely simple interface to use and plain CSS for some simple styles.
 
 ## Demo of my own CSS modules:
